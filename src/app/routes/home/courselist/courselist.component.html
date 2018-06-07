@@ -1,0 +1,8 @@
+<select [(ngModel)]="pricetype">
+    <option value="0">All Courses</option>
+    <option value="1">Heavily priced</option>
+    <option value="2">Moderatly priced</option>
+    <option value="3">Normally priced</option>
+</select>
+<br>
+<app-course *ngFor="let x of courses |cousefilter:pricetype" [course]="x"></app-course>
